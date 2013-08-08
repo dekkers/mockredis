@@ -750,6 +750,11 @@ class MockRedis(object):
         self.redis[dest] = union
         return len(union)
 
+    #### PubSub Commands ####
+
+    def publish(self, channel, message):
+        return 0
+
     #### Script Commands ####
 
     def eval(self, script, numkeys, *keys_and_args):
